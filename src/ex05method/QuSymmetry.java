@@ -3,7 +3,7 @@ package ex05method;
 public class QuSymmetry {
 
 	public static void main(String[] args) {
-		rotationSymmetryByWhile(4);
+		rotationSymmetryByWhile(8);
 		System.out.println();
 		rotationSymmetryByFor(4);
 
