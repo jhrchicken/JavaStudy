@@ -63,7 +63,7 @@ public class E06FruitSalesMain1 {
 
 		/*
 		판매자와 구매자의 인스턴스를 생성한다.
-		여기서는 우리가 생성자를 만들지 않았으므로 자동으로 생성되는 디폴트 
+		여기서는 우리가 생성자를 만들지 않았으므로 자동으로 생성되는 디폴트
 		 */
 		FruitSeller seller = new FruitSeller();
 		FruitBuyer buyer = new FruitBuyer();
