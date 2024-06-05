@@ -22,7 +22,7 @@ class FruitSeller {
 		// 보유한 사과에서 개수만큼 차감
 		numOfApple -= num;
 		// 금액을 합산한다.
-		myMoney += money; // myMoney += (num * APPLE_PRICE);
+		myMoney += (num * APPLE_PRICE);
 		// 사과의 개수를 반환한다. 즉 구매자에게 사과를 전달한다.
 		return num;
 	}
@@ -46,12 +46,13 @@ class FruitBuyer {
 	 */
 	public void buyApple(FruitSeller seller, int money) {
 		// 판매자가 반환해주는 사과의 개수를 합산한다.
-		numOfApple += seller.saleApple(money);
+		int num = seller.saleApple(money);
+		numOfApple += num;
 		// 지불한 금액을 차감한다.
-		myMoney -= money; // myMoney -= (seller.saleApple(money) * seller.APPLE_PRICE);
+		myMoney -= (num * seller.APPLE_PRICE);
 	}
 
-	public void showSaleResult() {
+	public void showBuyResult() {
 		System.out.println("[구매자] 현재잔액 : " + myMoney);
 		System.out.println("[구매자] 사과개수 : " + numOfApple);
 	}
@@ -63,21 +64,21 @@ public class E06FruitSalesMain1 {
 
 		/*
 		판매자와 구매자의 인스턴스를 생성한다.
-		여기서는 우리가 생성자를 만들지 않았으므로 자동으로 생성되는 디폴트
+		여기서는 우리가 생성자를 만들지 않았으므로 자동으로 생성되는 디폴트 생성자를 통해 인스턴스를 생성한다.
 		 */
 		FruitSeller seller = new FruitSeller();
 		FruitBuyer buyer = new FruitBuyer();
 
 		System.out.println("구매행위가 일어나기 전의 상태");
 		seller.showSaleResult();
-		buyer.showSaleResult();
+		buyer.showBuyResult();
 
 		// 구매자가 판매자에게 5000원을 지불하고 사과를 구매한다.
 		buyer.buyApple(seller, 4500);
 
 		System.out.println("구매행위가 일어난 후의 상태");
 		seller.showSaleResult();
-		buyer.showSaleResult();
+		buyer.showBuyResult();
 	}
 
 }
