@@ -47,7 +47,6 @@ public class E08VariableArgument {
 		return total;
 	}
 
-
 	public static void main(String[] args) {
 		/*
 		가변인자를 통해 메서드를 정의하였으므로 아래 모든 호출문장은 정상적으로 실행된다.
