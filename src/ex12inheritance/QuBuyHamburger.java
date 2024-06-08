@@ -1,5 +1,6 @@
 package ex12inheritance;
 
+// 버거 클래스
 class Burger {
 	private String name;
 	private int price;
@@ -7,6 +8,7 @@ class Burger {
 	private String sauce;
 	private String vegetable;
 
+	// 생성자 : 버거의 이름, 가격, 패티, 소스, 야채를 초기화
 	public Burger(String name, int price, String patty, String sauce, String vegetable) {
 		this.name = name;
 		this.price = price;
@@ -15,10 +17,12 @@ class Burger {
 		this.vegetable = vegetable;
 	}
 
+	// 가격을 반환하는 메소드
 	public int getPrice() {
 		return price;
 	}
 
+	// 버거의 이름, 가격, 패티, 소스, 야채 정보를 출력하는 메소드
 	public void showPrice() {
 		System.out.println(name);
 		System.out.println("가격 : " + price);
@@ -26,19 +30,23 @@ class Burger {
 	}
 }
 
+// 버거 기본 가격 클래스
 class HamburgerPrice {
 	Burger burger;
 	final int COKE = 1000;
 	final int POTATO = 1500;
 
+	// 생성자 : 버거 클래스를 초기화
 	public HamburgerPrice(Burger burger) {
 		this.burger = burger;
 	}
 
+	// 기본 가격을 계산하는 메소드
 	public int calcPrice() {
 		return burger.getPrice() + COKE + POTATO;
 	}
 
+	// 버거 정보와 기본 가격을 출력하는 메소드
 	public void showPrice() {
 		burger.showPrice();
 		System.out.println("결재금액 : " + calcPrice());
@@ -46,16 +54,20 @@ class HamburgerPrice {
 	}
 }
 
+// 버거 기본 가격 클래스를 상속한 세트 가격 클래스
 class SetPrice extends HamburgerPrice {
+	// 생성자 : 버거 클래스를 초기화
 	public SetPrice(Burger burger) {
 		super(burger);
 	}
 
+	// 오버라이딩 : 세트 가격을 계산하는 메소드
 	@Override
 	public int calcPrice() {
 		return super.calcPrice() - 500;
 	}
 
+	// 오버라이딩 : 버거 정보와 세트 가격을 출력하는 메소드
 	@Override
 	public void showPrice() {
 		burger.showPrice();
