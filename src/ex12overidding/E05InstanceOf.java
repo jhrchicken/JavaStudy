@@ -1,4 +1,4 @@
-package ex12inheritance;
+package ex12overidding;
 
 /*
 instanceof 연산자
@@ -27,7 +27,7 @@ class GoldPaperBox extends PaperBox {
 	}
 }
 
-public class E09InstanceOf {
+public class E05InstanceOf {
 	/*
 	- 메서드 정의시 부모타입의 매개변수를 설정하면 자식타입의 인스턴스를 모두 받을 수 있다.
 	- Box 타입으로 인수를 받게 되면 자동형변환(업캐스팅) 되므로 자식 클래스의 멤버메서드는 호출할 수 없게 된다.

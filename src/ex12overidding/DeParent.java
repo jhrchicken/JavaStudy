@@ -1,4 +1,4 @@
-package ex12inheritance;
+package ex12overidding;
 
 // 부모 클래스
 public class DeParent {

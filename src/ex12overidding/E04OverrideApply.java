@@ -1,6 +1,6 @@
-package ex12inheritance;
+package ex12overidding;
 
-public class E07RideAndLoad02 {
+public class E04OverrideApply {
 
 	public static void main(String[] args) {
 

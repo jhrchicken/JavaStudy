@@ -1,4 +1,4 @@
-package ex12inheritance;
+package ex12overidding;
 
 /*
 상속관계에서 오버로딩 vs 오버라이딩
@@ -57,7 +57,7 @@ class C extends B {
 	 */
 }
 
-public class E07RideAndLoad01 {
+public class E02RideAndLoad01 {
 
 	public static void main(String[] args) {
 
