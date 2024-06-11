@@ -1,8 +1,10 @@
 package ex13interface;
 
-/* 프로젝트 전체에서 기준 역할을 하는 추상 클래스
+/*
+프로젝트 전체에서 기준 역할을 하는 추상 클래스
 해당 클래스는 추상 메서드를 포함하고 있으므로 하위에서 상속 받으면
-반드시 추상 메서드를 오버라이딩 해야 한다. */
+반드시 추상 메서드를 오버라이딩 해야 한다.
+*/
 
 abstract class PersonalNumberStorageAbs {
 	// 정보를 저장하는 기능의 추상 메서드
@@ -12,10 +14,12 @@ abstract class PersonalNumberStorageAbs {
 	public abstract String searchPersonalInfo(String juminNum);
 }
 
-/* DTO (Date Transfer Object)
+/*
+DTO (Date Transfer Object)
 : 데이터를 저장하고 전송하기 위한 용도의 객체를 의미한다.
 VO (Value Object)로 표현하기도 한다.
-해당 프로그램에서는 이름과 주민번호를 저장하는 용도로 사용된다. */
+해당 프로그램에서는 이름과 주민번호를 저장하는 용도로 사용된다.
+*/
 class PersonalInfoDTO {
 	// 이름과 주민번호를 멤버변수로 선언
 	private String name;
@@ -29,8 +33,10 @@ class PersonalInfoDTO {
 		this.juminNum = juminNUm;
 	}
 
-	/* getter, setter 메서드 정의
-	: private으로 정의된 멤버변수를 설정하거나 값을 반환받기 위해 생성했다. */
+	/*
+	getter, setter 메서드 정의
+	: private으로 정의된 멤버변수를 설정하거나 값을 반환받기 위해 생성했다.
+	*/
 	public String getName() {
 		return name;
 	}
@@ -51,9 +57,11 @@ class PersonalInfoDTO {
 // 추상 클래스를 상속하여 정보 저장과 검색 기능을 구현한 클래스
 class PersonalNumberStorageExt extends PersonalNumberStorageAbs {
 
-	/* 멤버변수
+	/*
+	멤버변수
 	: 2명 이상의 정보를 저자해야 하므로 DTO 타입의 배열과
-	인덱스 카운트를 우한 변수를 선언했다. */
+	인덱스 카운트를 우한 변수를 선언했다.
+	*/
 	PersonalInfoDTO[] personalArr;
 	int numOfPerInfo;
 
@@ -65,8 +73,10 @@ class PersonalNumberStorageExt extends PersonalNumberStorageAbs {
 		numOfPerInfo = 0;
 	}
 
-	/* 추상 메서드를 오버라이딩한 후 재정의한다.
-	주민번호와 이름을 매개변수로 받은 후 DTO 인스턴스를 배열에 추가한다. */
+	/*
+	추상 메서드를 오버라이딩한 후 재정의한다.
+	주민번호와 이름을 매개변수로 받은 후 DTO 인스턴스를 배열에 추가한다.
+	*/
 	@Override
 	public void addPersonalInfo(String juminNum, String name) {
 		personalArr[numOfPerInfo] = new PersonalInfoDTO(name, juminNum);

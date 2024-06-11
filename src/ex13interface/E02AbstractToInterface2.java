@@ -1,19 +1,24 @@
 package ex13interface;
 
-/* 추상 클래스를 인터페이스로 변경하기
-
-abstract class => interface */
+/*
+추상 클래스를 인터페이스로 변경하기
+abstract class => interface
+*/
 interface IPersonalNumberStorage {
-	/* 멤버메서드인 경우 public abstract를,
-	멤버변수인 경우 public static final을 제거한다. */
+	/*
+	멤버메서드인 경우 public abstract를,
+	멤버변수인 경우 public static final을 제거한다.
+	*/
 	void addPersonalInfo(String juminNum, String name);
 
 	String searchPersonalInfo(String juminNum);
 }
 
-/* VO (Value Object)
+/*
+VO (Value Object)
 : 값만 저장할 수 있는 객체라는 뜻으로 데이터 저장용 클래스를 만들 때 사용한다.
-DTO와 비슷한 의미로 사용된다. */
+DTO와 비슷한 의미로 사용된다.
+*/
 class PersonalInfoVO {
 	private String name;
 	private String juminNum;
