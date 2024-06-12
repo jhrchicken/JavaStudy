@@ -1,6 +1,6 @@
-package ex15usefulclass;
+package ex16lambda;
 
-public class Q {
+public class Ex06Define2Supplier {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
