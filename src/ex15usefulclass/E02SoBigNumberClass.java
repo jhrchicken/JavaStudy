@@ -12,11 +12,10 @@ public class E02SoBigNumberClass {
 
 		/*
 		BigInteger 클래스
-			: int형이나 long형으로 표현할수 없는 범위의 큰수를 
-			연산할때 사용한다. 인자로 전달할때 반드시 문자열형태로
-			기술해야한다.
+			: int형이나 long형으로 표현할수 없는 범위의 큰수를 연산할때 사용한다.
+			인자로 전달할때 반드시 문자열 형태로 기술해야 한다.
 		 */
-		// long lngNum = 100000000000000000000; //코드작성불가
+		// long lngNum = 100000000000000000000; // 코드 작성 불가
 		BigInteger bigValue1 = new BigInteger("100000000000000000000");
 		BigInteger bigValue2 = new BigInteger("-99999999999999999999");
 

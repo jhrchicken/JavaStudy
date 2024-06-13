@@ -1,6 +1,6 @@
-package ex16lambda;
+package ex18lambda;
 
-public class Ex06Define3Consumer {
+public class Ex06Define4Function {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
