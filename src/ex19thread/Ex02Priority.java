@@ -67,6 +67,9 @@ public class Ex02Priority {
 		tr1.start();
 		tr2.start();
 		tr3.start();
+//
+//		tr1.setName("111");
+//		System.out.println(tr1.getName());
 
 	}
 

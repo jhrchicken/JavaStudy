@@ -262,7 +262,7 @@ class FriendInfoHandler {
 		} catch (Exception e) {
 			System.out.println("오류 발생");
 		}
-		System.err.println("친구 정보가 저장되었습니다.");
+		System.out.println("친구 정보가 저장되었습니다.");
 
 	}
 
