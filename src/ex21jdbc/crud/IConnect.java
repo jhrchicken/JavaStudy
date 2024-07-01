@@ -2,6 +2,14 @@ package ex21jdbc.crud;
 
 // JDBC프로그램에서 최상위 인터페이스로 사용
 public interface IConnect {
+	/*
+	interface에
+		선언한 변수는
+			public static final이 자동으로 추가된다. 즉 멤버상수로 선언된다.
+		선언한 메소드는
+			public abstract가 자동으로 추가된다. 즉 추상메서드만 선언할 수 있다.
+	 */
+
 	// 드라이버와 커넥션URL을 멤버상수로 선언
 	String ORACLE_DRIVER = "oracle.jdbc.OracleDriver";
 	String ORACLE_URL = "jdbc:oracle:thin:@localhost:1521:xe";
